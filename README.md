@@ -10,4 +10,4 @@ Installation:
 4) Create tasks with "Todo taskname", where taskname is the task in natural language input, for example 'clean my room on tuesday at 1pm p2' or 'call my Mom p1'
 (See https://www.leightonprice.com/todoist/dates.html for some great examples)
 
-All credit goes to @alanvardy and his great TOD CLI program (https://github.com/alanvardy/tod), which I found to create tasks extrememly quickly and effeciently. This is simply an ALfred wrapper to create tasks using that application.
+All credit goes to @alanvardy and his great TOD CLI program (https://github.com/alanvardy/tod), which I found to create tasks extrememly quickly and effeciently - This is simply an Alfred wrapper to create tasks using that application.
