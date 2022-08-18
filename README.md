@@ -1,4 +1,4 @@
-# Alfred TodWorkflow
+# Alfred Tod Workflow
 An Alfred (https://www.alfredapp.com) Wrapper for the TOD Application (https://github.com/alanvardy/tod) that allows you to quickly add tasks to your Todoist Inbox using Todoist Natural Language Processing
 
 Currently only the Inbox is supproted.
