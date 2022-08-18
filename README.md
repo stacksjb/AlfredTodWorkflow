@@ -1,7 +1,7 @@
 # Alfred Tod Workflow
 An Alfred (https://www.alfredapp.com) Wrapper for the TOD Application (https://github.com/alanvardy/tod) that allows you to quickly add tasks to your Todoist Inbox using Todoist Natural Language Processing
 
-Currently only the Inbox is supproted.
+As it uses Natural Language Processing, you can add to any inbox, add any tag, or use any date that NLP accepts - for example, "Laundry tuesday @House #Cleaning p3" would create a task for Laundry, due tuesday, with the label of @House, in the project of Cleaning, and a priority of p3
 
 Installation:
 1) Install TOD using the steps found at https://github.com/alanvardy/tod
