@@ -16,7 +16,13 @@ tod -l
 
 ## Usage
 
-1) Press your Alfred Shortcut, and create the task using "td taskname", where task name is the task. The field supports natural language processing, so you can include labels (@label), projects(#project), due dates(due tomorrow), descriptions (use // description), etc.
+1) Press your Alfred Shortcut, and create the task using "td taskname", where task name is the task. 
+* The field supports natural language processing, so you can include the following:
+  * labels (@label)
+  * projects (#projectname)
+  * due dates (due tomorrow
+  * descriptions ( //description)
+
 
 ![alfredtod](alfredtodwrapper.gif)
 
