@@ -11,11 +11,10 @@ Allows you to quickly create tasks using Alfred (and tod) and put them into Todo
 ## Installation
 
 1) [Install tod](https://github.com/alanvardy/tod)
-2) Configure tod:
+2) Configure tod and follow the prompts to enter your [API key](https://todoist.com/app/settings/integrations) and configure your Timezone.
 ```bash
 tod -l
 ```
-Follow the prompts to enter your [API key](https://todoist.com/app/settings/integrations) and configure your Timezone.
 
 3)Download the latest Alfred workflow from [Releases](https://github.com/stacksjb/AlfredTodWorkflow/releases) and add to Alfred
 
