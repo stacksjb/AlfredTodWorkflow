@@ -2,8 +2,7 @@
 
 An [Alfred](https://www.alfredapp.com/) wrapper for the  application.
 
-Allows you to quickly create tasks from an Alfred Shortcut into Todoist using [tod](https://github.com/alanvardy/tod).
-
+Allows you to quickly create tasks from an Alfred Shortcut into Todoist using [tod](https://github.com/alanvardy/tod).  
 tod allows for natural language processing, so you can include labels, projects, due dates, and descriptions.
 
 ## Installation
@@ -18,7 +17,7 @@ tod -l
 
 ## Usage
 
-1) Press your Alfred Shortcut, and create the task using "td taskname", where task name is the task. 
+1) Press your Alfred Shortcut, and create the task using "td taskname", where task name is the task.  
 * The field supports natural language processing, so you can include the following:
   * labels (@label)
   * projects (#projectname)
