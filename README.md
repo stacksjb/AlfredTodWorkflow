@@ -5,7 +5,7 @@ Installation:
 1) Install TOD using the steps found at https://github.com/alanvardy/tod
 2) Configure your API key and timezone (run tod -l from the command line, following the prompts)
 3) Install the Alfred Workflow
-4) Create tasks with "Todo taskname", where taskname is the task in natural language input, for example 'clean my room on tuesday at 1pm p2' or 'call my Mom p1'. You can also use the #Project and @Label attributes
+4) Create tasks with "Todo taskname", where taskname is the task in natural language input, for example 'clean my room on tuesday at 1pm p2' or 'call my Mom p1'. You can also use the #Project and @Label attributes (otherwise it will default to the Inbox, with no due date)
 (See https://www.leightonprice.com/todoist/dates.html for some great examples)
 
 All credit goes to @alanvardy and his great TOD CLI program (https://github.com/alanvardy/tod), which I found worked extrememly well for quick task creation - This is simply an Alfred wrapper to create tasks using that application.
