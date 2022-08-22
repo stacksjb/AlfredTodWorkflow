@@ -15,11 +15,8 @@ Allows you to quickly create tasks using Alfred (and tod) and put them into Todo
 ```bash
 tod -l
 ```
-
 3)Download the latest Alfred workflow from [Releases](https://github.com/stacksjb/AlfredTodWorkflow/releases) and add to Alfred
-
 4)Configure your shortcut (td by default) and any notification sound(s)
-
 
 ## Usage
 
