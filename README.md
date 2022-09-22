@@ -1,6 +1,6 @@
 # tod Alfred Wrapper
 
-An [Alfred](https://www.alfredapp.com/) wrapper for the  application.
+An [Alfred](https://www.alfredapp.com/) wrapper for the [tod](https://github.com/alanvardy/tod) application.
 
 Allows you to quickly create tasks from an Alfred Shortcut into Todoist using [tod](https://github.com/alanvardy/tod).  
 tod allows for natural language processing, so you can include labels, projects, due dates, and descriptions.
