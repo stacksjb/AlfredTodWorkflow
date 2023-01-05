@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>1344A197-3D6A-4780-89B2-6965AD819CD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>69D8FE8C-038E-4582-B73F-9BF0DC8D815B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>65165ABC-EBEF-423F-B3C3-4B00B2647C11</key>
 		<array>
 			<dict>
@@ -24,7 +37,20 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>69D8FE8C-038E-4582-B73F-9BF0DC8D815B</string>
+				<string>1344A197-3D6A-4780-89B2-6965AD819CD4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>69D8FE8C-038E-4582-B73F-9BF0DC8D815B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FCD1F155-6CDE-403B-80E6-E7A517D65717</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -59,6 +85,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D61A6993-6D0E-4785-9B18-DD5F3C82055A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D866DA1D-5E55-49F2-AF16-AB9C87C22355</key>
 		<array>
 			<dict>
@@ -76,11 +115,11 @@
 	<key>createdby</key>
 	<string>stacksjb</string>
 	<key>description</key>
-	<string>Alfred workflow for task entry via the Tod client</string>
+	<string>Alfred workflow for adding Todoist Tasks using the Tod client</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Tod Todoist</string>
+	<string>Tod Add Task</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -105,6 +144,21 @@
 			<string>CF40B742-39CD-47ED-A8CE-38BB57700D94</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>success-fanfare-trumpets-6185.mp3</string>
+				<key>systemsound</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -136,7 +190,7 @@
 						<key>inputstring</key>
 						<string></string>
 						<key>matchcasesensitive</key>
-						<false/>
+						<true/>
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
@@ -165,7 +219,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>todo</string>
+				<string>td</string>
 				<key>subtext</key>
 				<string>Input Task...</string>
 				<key>text</key>
@@ -203,6 +257,38 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>soundname</key>
+				<string>497710__miksmusic__hi-tech-error-alert-1.wav</string>
+				<key>systemsound</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>FCD1F155-6CDE-403B-80E6-E7A517D65717</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {variables}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>1344A197-3D6A-4780-89B2-6965AD819CD4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -210,7 +296,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Task {var:input} creation failed. {query} Check API key.</string>
+				<string>Task {var:input} creation failed. {query} Check for updates or API key.</string>
 				<key>title</key>
 				<string>Task Creation Failed!</string>
 			</dict>
@@ -230,32 +316,46 @@ Requires Tod (https://github.com/alanvardy/tod) to be installed and configured (
 Creates task using todoist natural language processing from Todoist (so saying "at this time" or "tomorrow" or "p1 p2 p3" will be parsed by Todoist - it simply passes the argument to the TOD client</string>
 	<key>uidata</key>
 	<dict>
+		<key>1344A197-3D6A-4780-89B2-6965AD819CD4</key>
+		<dict>
+			<key>xpos</key>
+			<real>500</real>
+			<key>ypos</key>
+			<real>465</real>
+		</dict>
+		<key>52C792D5-43B7-44E2-82BD-B5D0B35545F7</key>
+		<dict>
+			<key>xpos</key>
+			<real>845</real>
+			<key>ypos</key>
+			<real>90</real>
+		</dict>
 		<key>65165ABC-EBEF-423F-B3C3-4B00B2647C11</key>
 		<dict>
 			<key>note</key>
 			<string>Validate return for Success/Failure</string>
 			<key>xpos</key>
-			<real>481</real>
+			<real>576</real>
 			<key>ypos</key>
-			<real>120</real>
+			<real>155</real>
 		</dict>
 		<key>69D8FE8C-038E-4582-B73F-9BF0DC8D815B</key>
 		<dict>
 			<key>note</key>
 			<string>Failure Notification</string>
 			<key>xpos</key>
-			<real>675</real>
+			<real>750</real>
 			<key>ypos</key>
-			<real>325</real>
+			<real>475</real>
 		</dict>
 		<key>793F5B60-5CC2-4880-A51F-FF4446EBC41B</key>
 		<dict>
 			<key>note</key>
 			<string>Store input as variable</string>
 			<key>xpos</key>
-			<real>295</real>
+			<real>390</real>
 			<key>ypos</key>
-			<real>290</real>
+			<real>250</real>
 		</dict>
 		<key>CF40B742-39CD-47ED-A8CE-38BB57700D94</key>
 		<dict>
@@ -284,8 +384,17 @@ Creates task using todoist natural language processing from Todoist (so saying "
 			<key>ypos</key>
 			<real>155</real>
 		</dict>
+		<key>FCD1F155-6CDE-403B-80E6-E7A517D65717</key>
+		<dict>
+			<key>xpos</key>
+			<real>920</real>
+			<key>ypos</key>
+			<real>255</real>
+		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
 	<string>0.0.4</string>
