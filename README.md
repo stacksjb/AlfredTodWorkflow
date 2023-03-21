@@ -12,8 +12,9 @@ tod allows for natural language processing, so you can include labels, projects,
 ```bash
 tod -l
 ```
-3) Download the latest Alfred workflow from [Releases](https://github.com/stacksjb/AlfredTodWorkflow/releases) and add to Alfred
-4) Configure your shortcut (td by default) and any notification sound(s)
+3) Disable "Spinners" by changing the value from 'null' to 'false' in the tod.cfg file
+4) Download the latest Alfred workflow from [Releases](https://github.com/stacksjb/AlfredTodWorkflow/releases) and add to Alfred
+5) Configure your shortcut (td by default) and any notification sound(s)
 
 ## Usage
 
