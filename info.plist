@@ -21,6 +21,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3FAB592B-65C1-46C0-9FD2-F5F9C29E5290</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>521CFF45-3C8D-45B1-AF7F-35E2A6440958</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FAB592B-65C1-46C0-9FD2-F5F9C29E5290</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>65165ABC-EBEF-423F-B3C3-4B00B2647C11</key>
 		<array>
 			<dict>
@@ -130,7 +156,11 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>tod -t "${1}"</string>
+				<string>if tod -t "${1}" &gt; /dev/null; then
+    echo -n 0
+else
+    echo -n 1 
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -148,8 +178,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Task {var:input} created!</string>
+				<key>title</key>
+				<string>Task created!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D61A6993-6D0E-4785-9B18-DD5F3C82055A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>soundname</key>
-				<string>success-fanfare-trumpets-6185.mp3</string>
+				<string>success.mp3</string>
 				<key>systemsound</key>
 				<false/>
 			</dict>
@@ -163,21 +214,20 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
+				<key>argument</key>
+				<string>input</string>
+				<key>passthroughargument</key>
 				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Task {var:input} created!</string>
-				<key>title</key>
-				<string>Task created {query}</string>
+				<key>variables</key>
+				<dict>
+					<key>input</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>D61A6993-6D0E-4785-9B18-DD5F3C82055A</string>
+			<string>793F5B60-5CC2-4880-A51F-FF4446EBC41B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -192,11 +242,11 @@
 						<key>matchcasesensitive</key>
 						<true/>
 						<key>matchmode</key>
-						<integer>4</integer>
+						<integer>0</integer>
 						<key>matchstring</key>
-						<string>^✓$</string>
+						<string>0</string>
 						<key>outputlabel</key>
-						<string>Sucess</string>
+						<string>Success</string>
 						<key>uid</key>
 						<string>A9B26491-5B24-4780-8A89-06450C3441D6</string>
 					</dict>
@@ -237,28 +287,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>input</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>input</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>793F5B60-5CC2-4880-A51F-FF4446EBC41B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>soundname</key>
-				<string>497710__miksmusic__hi-tech-error-alert-1.wav</string>
+				<string>error.wav</string>
 				<key>systemsound</key>
 				<false/>
 			</dict>
@@ -296,7 +326,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Task {var:input} creation failed. {query} Check for updates or API key.</string>
+				<string>Task {var:input} creation failed. Check for updates, API key, or run setup.</string>
 				<key>title</key>
 				<string>Task Creation Failed!</string>
 			</dict>
@@ -307,11 +337,60 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>td-setup</string>
+				<key>subtext</key>
+				<string>Run Intial Config/Check Script</string>
+				<key>text</key>
+				<string>Todo Setup</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>python3 setup.py</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>521CFF45-3C8D-45B1-AF7F-35E2A6440958</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string>setup.py</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.browseinterminal</string>
+			<key>uid</key>
+			<string>3FAB592B-65C1-46C0-9FD2-F5F9C29E5290</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Alfred Tod workflow
 
-Requires Tod (https://github.com/alanvardy/tod) to be installed and configured (run tod -l after installation)
+Requires Tod (https://github.com/alanvardy/tod) to be installed and configured (run td-setup after installation)
 
 Creates task using todoist natural language processing from Todoist (so saying "at this time" or "tomorrow" or "p1 p2 p3" will be parsed by Todoist - it simply passes the argument to the TOD client</string>
 	<key>uidata</key>
@@ -322,6 +401,29 @@ Creates task using todoist natural language processing from Todoist (so saying "
 			<real>500</real>
 			<key>ypos</key>
 			<real>465</real>
+		</dict>
+		<key>3FAB592B-65C1-46C0-9FD2-F5F9C29E5290</key>
+		<dict>
+			<key>xpos</key>
+			<real>375</real>
+			<key>ypos</key>
+			<real>760</real>
+		</dict>
+		<key>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</key>
+		<dict>
+			<key>note</key>
+			<string>Input Task in Todoist NLP</string>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>600</real>
+		</dict>
+		<key>521CFF45-3C8D-45B1-AF7F-35E2A6440958</key>
+		<dict>
+			<key>xpos</key>
+			<real>690</real>
+			<key>ypos</key>
+			<real>730</real>
 		</dict>
 		<key>52C792D5-43B7-44E2-82BD-B5D0B35545F7</key>
 		<dict>
@@ -335,7 +437,7 @@ Creates task using todoist natural language processing from Todoist (so saying "
 			<key>note</key>
 			<string>Validate return for Success/Failure</string>
 			<key>xpos</key>
-			<real>576</real>
+			<real>578</real>
 			<key>ypos</key>
 			<real>155</real>
 		</dict>
@@ -344,45 +446,45 @@ Creates task using todoist natural language processing from Todoist (so saying "
 			<key>note</key>
 			<string>Failure Notification</string>
 			<key>xpos</key>
-			<real>750</real>
+			<real>725</real>
 			<key>ypos</key>
-			<real>475</real>
+			<real>515</real>
 		</dict>
 		<key>793F5B60-5CC2-4880-A51F-FF4446EBC41B</key>
 		<dict>
 			<key>note</key>
-			<string>Store input as variable</string>
+			<string>Store input</string>
 			<key>xpos</key>
-			<real>390</real>
+			<real>235</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>100</real>
 		</dict>
 		<key>CF40B742-39CD-47ED-A8CE-38BB57700D94</key>
 		<dict>
 			<key>note</key>
 			<string>Pass input to TOD client for new task creation</string>
 			<key>xpos</key>
-			<real>285</real>
+			<real>370</real>
 			<key>ypos</key>
-			<real>30</real>
+			<real>15</real>
 		</dict>
 		<key>D61A6993-6D0E-4785-9B18-DD5F3C82055A</key>
 		<dict>
 			<key>note</key>
 			<string>Success Notification</string>
 			<key>xpos</key>
-			<real>685</real>
+			<real>710</real>
 			<key>ypos</key>
-			<real>90</real>
+			<real>20</real>
 		</dict>
 		<key>D866DA1D-5E55-49F2-AF16-AB9C87C22355</key>
 		<dict>
 			<key>note</key>
 			<string>Input Task in Todoist NLP</string>
 			<key>xpos</key>
-			<real>65</real>
+			<real>100</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>250</real>
 		</dict>
 		<key>FCD1F155-6CDE-403B-80E6-E7A517D65717</key>
 		<dict>
@@ -397,7 +499,7 @@ Creates task using todoist natural language processing from Todoist (so saying "
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.4</string>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/stacksjb/AlfredTodWorkflow</string>
 </dict>
