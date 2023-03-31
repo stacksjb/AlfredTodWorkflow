@@ -11,7 +11,7 @@ tod allows for natural language processing, so you can include labels, projects,
 2) Run "td-setup" and follow the prompts for the inital config (including downloading Rust, TOD, and configuring your API key).
 3) Once you recive the "Configuration completed successfully! Please check your Todoist Inbox!" message, and a "Alfred Test Task" shows up in your Inbox due for today, you can begin using the workflow.
 
-### Manual Installation
+## Manual Installation
 
 If you would like to install manually:
 1) [Install tod](https://github.com/alanvardy/tod) (and the dependencies)
