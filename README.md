@@ -5,16 +5,22 @@ An [Alfred](https://www.alfredapp.com/) wrapper for the [tod](https://github.com
 Allows you to quickly create tasks from an Alfred Shortcut into Todoist using [tod](https://github.com/alanvardy/tod).  
 tod allows for natural language processing, so you can include labels, projects, due dates, and descriptions.
 
-## Installation
+## Automatic Installation
 
-1) [Install tod](https://github.com/alanvardy/tod)
+1) Download the latest workflow from releases and install
+2) Run "td-setup" and follow the prompts for the inital config (including downloading Rust, TOD, and configuring your API key).
+3) Once you recive the "Configuration completed successfully! Please check your Todoist Inbox!" message, and a "Alfred Test Task" shows up in your Inbox due for today, you can begin using the workflow.
+
+###Manual Installation
+
+If you would like to install manually:
+1) [Install tod](https://github.com/alanvardy/tod) (and the dependencies)
 2) Configure tod and follow the prompts to enter your [API key](https://todoist.com/app/settings/integrations) and configure your Timezone.
 ```bash
 tod -l
 ```
-3) Disable "Spinners" by changing the value from 'null' to 'false' in the tod.cfg file
-4) Download the latest Alfred workflow from [Releases](https://github.com/stacksjb/AlfredTodWorkflow/releases) and add to Alfred
-5) Configure your shortcut (td by default) and any notification sound(s)
+3) Download the latest Alfred workflow from [Releases](https://github.com/stacksjb/AlfredTodWorkflow/releases) and add to Alfred
+4) Configure your shortcut (td by default) and any notification sound(s)
 
 ## Usage
 
