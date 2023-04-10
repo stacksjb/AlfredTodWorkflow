@@ -27,7 +27,7 @@ tod -l
 1) Press your Alfred Shortcut, and create the task using "td taskname", where task name is the task.  
 * The field supports natural language processing, so you can include the following:
   * labels (@label)
-  * projects (#projectname)
+  * projects (#projectname) (Project must already exist)
   * due dates (due tomorrow
   * descriptions ( //description)
 
