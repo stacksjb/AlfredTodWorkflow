@@ -10,6 +10,7 @@ tod allows for natural language processing, so you can include labels, projects,
 1) Download the latest workflow from releases and install
 2) Run "td-setup" and follow the prompts for the inital config (including downloading Rust, TOD, and configuring your API key).
 3) Once you recive the "Configuration completed successfully! Please check your Todoist Inbox!" message, and a "Alfred Test Task" shows up in your Inbox due for today, you can begin using the workflow.
+4) If desired, you can change the sounds under the "Play Sound" workflow items.
 
 ### Manual Installation
 
