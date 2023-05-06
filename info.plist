@@ -98,6 +98,21 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7D418061-F636-4D79-8A00-085454F5A434</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>075B5E5C-FC47-4FFE-8222-37DF1AE98670</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CF40B742-39CD-47ED-A8CE-38BB57700D94</key>
 		<array>
 			<dict>
@@ -115,7 +130,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
+				<string>7D418061-F636-4D79-8A00-085454F5A434</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -156,7 +171,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>if tod -q "${1}" &gt; /dev/null; then
+				<string>if tod -q "${task_prefix}${1}" &gt; /dev/null; then
     echo -n 0
 else
     echo -n 1 
@@ -185,7 +200,7 @@ fi</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Task {var:input} created!</string>
+				<string>Task {var:task_prefix}{var:input} created!</string>
 				<key>title</key>
 				<string>Task created!</string>
 			</dict>
@@ -193,6 +208,21 @@ fi</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>D61A6993-6D0E-4785-9B18-DD5F3C82055A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>success.mp3</string>
+				<key>systemsound</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -219,15 +249,32 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>success.mp3</string>
-				<key>systemsound</key>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:sound}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>5</integer>
+						<key>matchstring</key>
+						<string>enabled</string>
+						<key>outputlabel</key>
+						<string>Sound</string>
+						<key>uid</key>
+						<string>075B5E5C-FC47-4FFE-8222-37DF1AE98670</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>No Sound</string>
+				<key>hideelse</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
+			<string>7D418061-F636-4D79-8A00-085454F5A434</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -430,18 +477,18 @@ Creates task using todoist natural language processing from Todoist (so saying "
 		<key>52C792D5-43B7-44E2-82BD-B5D0B35545F7</key>
 		<dict>
 			<key>xpos</key>
-			<real>910</real>
+			<real>930</real>
 			<key>ypos</key>
-			<real>105</real>
+			<real>85</real>
 		</dict>
 		<key>65165ABC-EBEF-423F-B3C3-4B00B2647C11</key>
 		<dict>
 			<key>note</key>
 			<string>Validate return for Success/Failure</string>
 			<key>xpos</key>
-			<real>578</real>
+			<real>558</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>235</real>
 		</dict>
 		<key>69D8FE8C-038E-4582-B73F-9BF0DC8D815B</key>
 		<dict>
@@ -461,6 +508,13 @@ Creates task using todoist natural language processing from Todoist (so saying "
 			<key>ypos</key>
 			<real>100</real>
 		</dict>
+		<key>7D418061-F636-4D79-8A00-085454F5A434</key>
+		<dict>
+			<key>xpos</key>
+			<real>825</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
 		<key>CF40B742-39CD-47ED-A8CE-38BB57700D94</key>
 		<dict>
 			<key>note</key>
@@ -475,9 +529,9 @@ Creates task using todoist natural language processing from Todoist (so saying "
 			<key>note</key>
 			<string>Success Notification</string>
 			<key>xpos</key>
-			<real>710</real>
+			<real>690</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>25</real>
 		</dict>
 		<key>D866DA1D-5E55-49F2-AF16-AB9C87C22355</key>
 		<dict>
@@ -491,17 +545,56 @@ Creates task using todoist natural language processing from Todoist (so saying "
 		<key>FCD1F155-6CDE-403B-80E6-E7A517D65717</key>
 		<dict>
 			<key>xpos</key>
-			<real>920</real>
+			<real>940</real>
 			<key>ypos</key>
-			<real>255</real>
+			<real>370</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
-	<key>variablesdontexport</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Task Creation Sound</string>
+			</dict>
+			<key>description</key>
+			<string>De-select to disable Task Creation Sound</string>
+			<key>label</key>
+			<string>Sound</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>sound</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>OPTIONAL Task Prefix. If configured, automatically prepends to the beginning of all created tasks.</string>
+			<key>label</key>
+			<string>Task Prefix</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>task_prefix</string>
+		</dict>
+	</array>
 	<key>version</key>
-	<string>0.2.0</string>
+	<string>0.2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/stacksjb/AlfredTodWorkflow</string>
 </dict>
