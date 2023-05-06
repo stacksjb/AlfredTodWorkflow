@@ -156,7 +156,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>if tod -t "${1}" &gt; /dev/null; then
+				<string>if tod -q "${1}" &gt; /dev/null; then
     echo -n 0
 else
     echo -n 1 
@@ -199,21 +199,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>success.mp3</string>
-				<key>systemsound</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>input</string>
 				<key>passthroughargument</key>
@@ -228,6 +213,21 @@ fi</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>793F5B60-5CC2-4880-A51F-FF4446EBC41B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>success.mp3</string>
+				<key>systemsound</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>52C792D5-43B7-44E2-82BD-B5D0B35545F7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -377,7 +377,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>path</key>
-				<string>setup.py</string>
+				<string>./setup.py</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.browseinterminal</string>
@@ -390,7 +390,9 @@ fi</string>
 	<key>readme</key>
 	<string>Alfred Tod workflow
 
-Requires Tod (https://github.com/alanvardy/tod) to be installed and configured (run td-setup after installation)
+Requires Tod (https://github.com/alanvardy/tod) to be installed and configured
+
+If this is your first time installing, ensure TOD is configured and installed correctly by running "td-setup"
 
 Creates task using todoist natural language processing from Todoist (so saying "at this time" or "tomorrow" or "p1 p2 p3" will be parsed by Todoist - it simply passes the argument to the TOD client</string>
 	<key>uidata</key>
@@ -412,7 +414,7 @@ Creates task using todoist natural language processing from Todoist (so saying "
 		<key>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</key>
 		<dict>
 			<key>note</key>
-			<string>Input Task in Todoist NLP</string>
+			<string>Initial TOD Setup and Configuration</string>
 			<key>xpos</key>
 			<real>115</real>
 			<key>ypos</key>
@@ -428,9 +430,9 @@ Creates task using todoist natural language processing from Todoist (so saying "
 		<key>52C792D5-43B7-44E2-82BD-B5D0B35545F7</key>
 		<dict>
 			<key>xpos</key>
-			<real>845</real>
+			<real>910</real>
 			<key>ypos</key>
-			<real>90</real>
+			<real>105</real>
 		</dict>
 		<key>65165ABC-EBEF-423F-B3C3-4B00B2647C11</key>
 		<dict>
@@ -499,7 +501,7 @@ Creates task using todoist natural language processing from Todoist (so saying "
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/stacksjb/AlfredTodWorkflow</string>
 </dict>
