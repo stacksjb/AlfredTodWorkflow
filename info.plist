@@ -169,12 +169,14 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>70</integer>
 				<key>script</key>
-				<string>if tod -q "${task_prefix}${1}${task_suffix}" &gt; /dev/null; then
+				<string>export PATH=$PATH:~/.cargo/bin/
+
+if tod -q ${task_prefix}${1}${task_suffix} &gt; /dev/null; then
     echo -n 0
 else
-    echo -n 1 
+    echo -n 1
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -460,7 +462,7 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<key>xpos</key>
 			<real>455</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>535</real>
 		</dict>
 		<key>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</key>
 		<dict>
@@ -533,9 +535,9 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<key>note</key>
 			<string>Pass input to TOD client for new task creation</string>
 			<key>xpos</key>
-			<real>370</real>
+			<real>380</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>20</real>
 		</dict>
 		<key>D61A6993-6D0E-4785-9B18-DD5F3C82055A</key>
 		<dict>
@@ -630,7 +632,7 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2.3</string>
+	<string>0.2.4</string>
 	<key>webaddress</key>
 	<string>https://github.com/stacksjb/AlfredTodWorkflow</string>
 </dict>
