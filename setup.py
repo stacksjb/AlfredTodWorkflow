@@ -36,7 +36,7 @@ def main():
         print ('TOD is Configured!')
     else:
         print('Running initial config and creating test task')
-        task_command = f'{todexe} -q Alfred TOD Test Task'
+        task_command = f'{todexe} t c Alfred TOD Test Task'
         subprocess.run(task_command, shell=True, check=True)
 
     print ('Configuration completed successfully! Please check your Todoist Inbox!')

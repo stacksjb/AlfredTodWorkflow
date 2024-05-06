@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.stacks.todWorkflow</string>
+	<string></string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -156,11 +156,11 @@
 	<key>createdby</key>
 	<string>stacksjb</string>
 	<key>description</key>
-	<string>Alfred workflow for adding Todoist Tasks using the Tod client</string>
+	<string>Alfred workflow for working with the Tod Todoist cli client</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Tod Add Task</string>
+	<string>Tod Tasks</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -173,7 +173,7 @@
 				<key>script</key>
 				<string>export PATH=$PATH:~/.cargo/bin/
 
-if tod -q ${task_prefix}${1}${task_suffix} &gt; /dev/null; then
+if tod t q -c ${task_prefix}${1}${task_suffix} &gt; /dev/null; then
     echo -n 0
 else
     echo -n 1
@@ -241,7 +241,7 @@ fi</string>
 						<key>matchmode</key>
 						<integer>5</integer>
 						<key>matchstring</key>
-						<string>enabled</string>
+						<string></string>
 						<key>outputlabel</key>
 						<string>Sound</string>
 						<key>uid</key>
@@ -469,9 +469,9 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<key>note</key>
 			<string>Initial TOD Setup and Configuration</string>
 			<key>xpos</key>
-			<real>35</real>
+			<real>50</real>
 			<key>ypos</key>
-			<real>635</real>
+			<real>595</real>
 		</dict>
 		<key>521CFF45-3C8D-45B1-AF7F-35E2A6440958</key>
 		<dict>
@@ -628,11 +628,51 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<key>variable</key>
 			<string>task_suffix</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>This will run "tod task next -p" with the project name and return it for completion</string>
+			<key>label</key>
+			<string>Project to grab Next Task from</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>project</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>tod task next</string>
+				<key>placeholder</key>
+				<string>Next Task</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The query to run in CLI for next task</string>
+			<key>label</key>
+			<string>Query for Next task</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>tn_query</string>
+		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
-	<string>0.2.4</string>
+	<string>0.2.6</string>
 	<key>webaddress</key>
 	<string>https://github.com/stacksjb/AlfredTodWorkflow</string>
 </dict>
