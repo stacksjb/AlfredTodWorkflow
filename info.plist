@@ -629,6 +629,8 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<string>task_suffix</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>0.2.6</string>
 	<key>webaddress</key>

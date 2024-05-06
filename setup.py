@@ -31,16 +31,13 @@ def main():
             print('Attemping to Install TOD')
             tod_install = f'{cargopath} install tod'
             subprocess.run(tod_install, shell=True, check=True)
-    print('Checking for Config File...')
-    if (os.path.isfile(configfile)):
-        print ('TOD is Configured!')
-    else:
         print('Running initial config and creating test task')
-        task_command = f'{todexe} t c Alfred TOD Test Task'
-        subprocess.run(task_command, shell=True, check=True)
-
-    print ('Configuration completed successfully! Please check your Todoist Inbox!')
-
+    task_command = f'{todexe} t q -c Alfred Test Task'
+    result = subprocess.run(task_command, shell=True, check=True)
+    if result.returncode == 0:
+        print ('Configuration completed successfully! Please check your Todoist Inbox for the Alfred Test Task!')
+    else:
+        print("There was an error with creating the test task. Please run 'tod config reset' and try running setup again.")
 # Function for Yes/No response prompts
 def yes_no(question: str) -> bool:
     reply = None
