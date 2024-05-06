@@ -628,48 +628,6 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<key>variable</key>
 			<string>task_suffix</string>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<false/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>This will run "tod task next -p" with the project name and return it for completion</string>
-			<key>label</key>
-			<string>Project to grab Next Task from</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>project</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>tod task next</string>
-				<key>placeholder</key>
-				<string>Next Task</string>
-				<key>required</key>
-				<false/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>The query to run in CLI for next task</string>
-			<key>label</key>
-			<string>Query for Next task</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>tn_query</string>
-		</dict>
 	</array>
 	<key>version</key>
 	<string>0.2.6</string>
