@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>521CFF45-3C8D-45B1-AF7F-35E2A6440958</string>
+				<string>F2D19A0D-E9EA-45D7-A87E-4837EF95FCEB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -389,27 +389,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>td-setup</string>
-				<key>subtext</key>
-				<string>Run Intial Config/Check Script</string>
-				<key>text</key>
-				<string>Todo Setup</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>escaping</key>
 				<integer>65</integer>
 				<key>script</key>
@@ -442,6 +421,42 @@ fi</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>65</integer>
+				<key>script</key>
+				<string>zsh "{const:alfred_preferences}/workflows/{const:alfred_workflow_uid}/setup.zsh"</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>F2D19A0D-E9EA-45D7-A87E-4837EF95FCEB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>td-setup</string>
+				<key>subtext</key>
+				<string>Run Intial Config/Check Script</string>
+				<key>text</key>
+				<string>Todo Setup</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4CA015AF-C9E1-4CF2-AC7A-B4CB3172EDF9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Alfred Tod workflow
@@ -469,16 +484,16 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<key>note</key>
 			<string>Initial TOD Setup and Configuration</string>
 			<key>xpos</key>
-			<real>50</real>
+			<real>85</real>
 			<key>ypos</key>
-			<real>595</real>
+			<real>1005</real>
 		</dict>
 		<key>521CFF45-3C8D-45B1-AF7F-35E2A6440958</key>
 		<dict>
 			<key>xpos</key>
-			<real>315</real>
+			<real>420</real>
 			<key>ypos</key>
-			<real>660</real>
+			<real>650</real>
 		</dict>
 		<key>52C792D5-43B7-44E2-82BD-B5D0B35545F7</key>
 		<dict>
@@ -556,6 +571,13 @@ Task Prefix/Suffix can be used if you want to always (be default) add a specific
 			<real>30</real>
 			<key>ypos</key>
 			<real>340</real>
+		</dict>
+		<key>F2D19A0D-E9EA-45D7-A87E-4837EF95FCEB</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>1005</real>
 		</dict>
 		<key>FCD1F155-6CDE-403B-80E6-E7A517D65717</key>
 		<dict>
