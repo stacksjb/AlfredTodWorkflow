@@ -1,0 +1,2 @@
+[dependencies]
+dependency-crate = { git = "https://github.com/alanvardy/tod", branch = "main" }
