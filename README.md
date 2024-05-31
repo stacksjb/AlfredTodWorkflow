@@ -52,3 +52,6 @@ This tool provides that input functionality for me anytime I am working at my co
 ## Credits
 
 All credit goes to [@alanvardy](https://github.com/alanvardy/tod) and his tod application, which provides the underlying framework (and does all the heavy lifting) for the task creation.
+
+
+Audio sound credits to https://pixabay.com/sound-effects/success-fanfare-trumpets-6185/ and https://freesound.org/people/Kenneth_Cooney/sounds/609335/
